@@ -1,2 +1,3 @@
 # IMC-Prosperity-4-Manual-Trading-write-up
-Post competition write-up for IMC Prosperity 4's manual trading challenge where I ranked #11 India and #73 Overall out of 18000+ teams.
+### Post competition write-up for IMC Prosperity 4's manual trading challenge where I ranked #11 India and #73 Overall out of 18000+ teams.
+First of all, thank you <a href="https://www.linkedin.com/in/parth-sharma9913/">Parth Sharma</a> (lead Algorithmic Strategy) and <a href="https://www.linkedin.com/in/aatman-patel-a28208371/">Aatman Patel</a> (lead mental support) who helped me, <a href="https://www.linkedin.com/in/patrank-rai-681549378/">Patrank Rai</a> (lead Manual Trading Desk), with all the late nights, the brainstorming sessions, and the technical foundation that allowed us to secure this result.
