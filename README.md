@@ -31,3 +31,68 @@ I am not going to lie—I completely relied on AI (Gemini PRO) for this round. M
 
 Skipping the Prosperity Wiki for this round was another major blunder on my part, but it set the foundation for how I tackled the rest of the challenge.
 ## Round: 2
+The objective was to allocate a finite budget of 50,000 XIRECs across three growth pillars—**Research**, **Scale**, and **Speed**—to maximize net Profit and Loss (PnL).
+
+### My Allocation Strategy: `17 / 47 / 36`
+
+| Pillar | Allocation (%) | Focus Area |
+| :--- | :---: | :--- |
+| **Research** | **17%** | Quantitative edge, alpha generation, ML infrastructure |
+| **Scale** | **47%** | Strategy deployment, exchange access, volume capacity |
+| **Speed** | **36%** | Low-latency execution, hardware (FPGA, RF, Microwave) |
+
+---
+
+### Strategy Breakdown & Mathematical Proof
+
+The final PnL score is governed by the following objective function:
+
+PnL = (Research * Scale * Speed) - Budget_Used
+
+#### 1. Research: Capturing the Logarithmic Alpha (17%)
+Research determines the fundamental edge of the market-making operation, modeled by the function:
+
+R(x) = 200,000 * [ ln(1+x) / ln(101) ]
+
+Evaluating my allocation of x = 17:
+
+R(17) = 200,000 * [ ln(18) / ln(101) ] = 125,256.32
+
+By investing just **17%** of my budget, I successfully capture **62.63%** of the maximum theoretical trading edge. Pushing further down this curve yields severe diminishing marginal returns, making any additional allocation highly inefficient.
+
+#### 2. Scale: Linear Capital Amplification (47%)
+Scale dictates market coverage and volume capacity, growing linearly according to:
+
+S(x) = 0.07 * x
+
+For my allocation of x = 47, the multiplier evaluates directly to:
+
+S(47) = 0.07 * 47 = 3.29
+
+Because Scale does not suffer from diminishing returns, every percentage point I moved from Research into Scale acts as a pure, constant amplifier on my captured alpha.
+
+---
+
+### Game-Theoretic Analysis of Speed (36%)
+
+The Speed pillar determines execution hit rate by mapping ordinal player ranks linearly to a multiplier interval between 0.1 and 0.9. This creates a competitive tournament where you must anticipate crowd psychology.
+
+I selected **36%** to intentionally front-run two primary player cohorts:
+* **The Naive Splitters (33.3%):** Participants who default to an even three-way split.
+* **The Round-Number Bias (35%):** Participants who cluster at standard 5% psychological intervals.
+
+Bidding 36% allows me to jump ahead of these massive baseline clusters to secure a high execution multiplier (projected at 0.65 - 0.78) while conserving maximum residual capital for Scale.
+
+---
+
+### Portfolio Optimization vs. Naive Benchmark
+
+Before factoring in the competitive rank-based speed multiplier, my optimized portfolio vastly outperforms a standard equal-split baseline:
+
+| Strategy Allocation | Research Value | Scale Multiplier | Gross Product (R * S) | Budget Spent |
+| :--- | :--- | :--- | :--- | :--- |
+| **Naive Split (33 / 33 / 34)** | 152,827.67 | 2.31 | 353,031.91 | 50,000 XIRECs |
+| **My Optimized (17 / 47 / 36)** | **125,256.32** | **3.29** | **412,093.30** | **50,000 XIRECs** |
+| **Delta** | *-18.04%* | *+42.42%* | **+16.73%** | *0%* |
+
+> **Key Takeaway:** Shifting capital away from the flat, saturated end of the Research curve into the linear Scale engine generates a **16.73% expansion in raw gross capacity** before the speed rank advantage is even applied.
