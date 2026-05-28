@@ -47,27 +47,27 @@ The objective was to allocate a finite budget of 50,000 XIRECs across three grow
 
 The final PnL score is governed by the following objective function:
 
-PnL = (Research * Scale * Speed) - Budget_Used
+$$ PnL = (Research * Scale * Speed) - Budget Used $$
 
 #### 1. Research: Capturing the Logarithmic Alpha (17%)
 Research determines the fundamental edge of the market-making operation, modeled by the function:
 
-R(x) = 200,000 * [ ln(1+x) / ln(101) ]
+$$ R(x) = 200,000 * [ ln(1+x) / ln(101) ] $$
 
 Evaluating my allocation of x = 17:
 
-R(17) = 200,000 * [ ln(18) / ln(101) ] = 125,256.32
+$$ R(17) = 200,000 * [ ln(18) / ln(101) ] = 125,256.32 $$
 
 By investing just **17%** of my budget, I successfully capture **62.63%** of the maximum theoretical trading edge. Pushing further down this curve yields severe diminishing marginal returns, making any additional allocation highly inefficient.
 
 #### 2. Scale: Linear Capital Amplification (47%)
 Scale dictates market coverage and volume capacity, growing linearly according to:
 
-S(x) = 0.07 * x
+$$ S(x) = 0.07 * x $$
 
 For my allocation of x = 47, the multiplier evaluates directly to:
 
-S(47) = 0.07 * 47 = 3.29
+$$ S(47) = 0.07 * 47 = 3.29 $$
 
 Because Scale does not suffer from diminishing returns, every percentage point I moved from Research into Scale acts as a pure, constant amplifier on my captured alpha.
 
@@ -96,3 +96,5 @@ Before factoring in the competitive rank-based speed multiplier, my optimized po
 | **Delta** | *-18.04%* | *+42.42%* | **+16.73%** | *0%* |
 
 > **Key Takeaway:** Shifting capital away from the flat, saturated end of the Research curve into the linear Scale engine generates a **16.73% expansion in raw gross capacity** before the speed rank advantage is even applied.
+
+## Round: 3
