@@ -98,3 +98,82 @@ Before factoring in the competitive rank-based speed multiplier, my optimized po
 > **Key Takeaway:** Shifting capital away from the flat, saturated end of the Research curve into the linear Scale engine generates a **16.73% expansion in raw gross capacity** before the speed rank advantage is even applied.
 
 ## Round: 3
+In Round 3, I optimized a dual-bid architecture for trading Ornamental Bio-Pods against counterparties (Gardeners). Rather than relying on standard, static mathematical midpoints, my strategy was explicitly engineered around **behavioral game theory and competitor psychological profiling**. 
+
+By diagnosing the market's collective risk-aversion and predicting how the crowd would react to an aggressive, asymmetric penalty structure, I successfully anticipated the global trading sentiment. This psychological arbitrage allowed me to out-maneuver the herd, capturing a total manual trading P&L of **78,090**.
+
+---
+
+### Part I: Establishing the Psychological Anchor
+
+To out-think my competitors, I first isolated the theoretical baseline that every rational market participant would use as their starting reference point. 
+
+Given the uniform distribution of reserve prices $R \sim U(670, 920)$, the base Expected Profit function $E[\Pi(b)]$ for an unpenalized bid $b$ is defined by the product of execution probability and the captured trading spread:
+
+$$E[\Pi(b)] = \left(\frac{b - 670}{250}\right) \cdot (920 - b)$$
+
+I evaluated the first derivative with respect to $b$ to pinpoint the vertex of this profit parabola:
+
+$$\frac{d}{db} E[\Pi(b)] = \frac{1}{250} \cdot (1590 - 2b)$$
+
+Setting the derivative to zero locates the exact unpenalized mathematical peak:
+
+$$1590 - 2b = 0 \implies b = 795$$
+
+Although a standard optimization model points to **795** as the peak, I treated this value purely as a psychological benchmark. I factored in how participant sentiment and the defensive reaction to the cubic penalty would shift the competitive herd away from this static midpoint.
+
+---
+
+### Part II: Deconstructing Competitor Sentiment
+
+The introduction of the global average tracking system fundamentally transformed this challenge into a **Keynesian Beauty Contest**. My entire strategy relied on predicting how the market's collective sentiment would shift away from the 795 anchor.
+
+#### 1. The First Bid: Capitalizing on Value-Seeking Behavior
+For the first bid, there was no penalty for falling below the global average. I anticipated that the dominant sentiment here would be pure margin-maximization. Traders would aggressively underbid the 795 mathematical optimum to secure deep value on low-reserve counterparties. 
+
+* **My Psychological Adjustment:** Expecting a dense cluster of bids below the optimum, I leaned into this conservative sentiment and positioned my first bid at **765**. This allowed me to front-run the ultra-low bidders while maintaining an incredibly high profit margin of **155 units** per trade.
+
+#### 2. The Second Bid: Anticipating the Cubic Penalty Panic
+The second bid introduced a severe, asymmetric cubic penalty for teams falling below the global second-bid average ($avg\_b2$):
+
+$$\text{Penalty Factor} = \left(\frac{920 - avgb_2}{920 - b_2}\right)^3$$
+
+I recognized that this specific mathematical phrasing would trigger widespread **loss aversion**. Traders would realize that being even slightly under the average would destroy their P&L, sparking an aggressive upward bidding spiral as everyone tried to out-climb each other. 
+
+* **My Psychological Adjustment:** I deduced that the herd would completely abandon the 795 anchor and panic-shift their bids deep into the 800s. To guarantee safety from this psychological feedback loop, I over-indexed on security and aggressively priced my second bid at **865**. I was willing to sacrifice a small amount of theoretical spread to completely insure my trades against the crowd’s panic.
+
+---
+
+### Part III: Empirical Validation of the Strategy
+
+The post-round market results perfectly validated my behavioral thesis, proving that my intuition regarding competitor sentiment was remarkably accurate.
+
+#### Performance Summary
+
+| Metric | Lowest Bid ($b_1$) | Highest Bid ($b_2$) | Total / Average |
+| :--- | :--- | :--- | :--- |
+| **My Bid Price** | **765** | **865** | — |
+| **Global Average Bid** | 768 | 859 | — |
+| **Accepted Trades** | 353 | 425 | **778** |
+| **Rejected Trades** | 647 | 575 | **1,222** |
+| **Total Block P&L** | **54,715** | **23,375** | **78,090** |
+
+#### Visual Strategy Alignment
+
+```text
+               MARKET OUTCOME HISTOGRAM & STRATEGY ALIGNMENT
+
+       [First Bid Cluster]                      [Second Bid Cluster]
+  Traders maximize profit margin.           Traders panic over cubic penalty.
+       
+           My Bid: 765                                  Global Avg: 859
+                │                                            │
+   ┌───┐ ┌───┐  ▼  ┌───┐                               ┌───┐ ▼ ┌───┐
+   │   │ │   │  ┆  │   │                               │   │ ┆ │   │ ┌───┐
+───┴───┴─┴───┴─────┴───┴───────────────────────────────┴───┴───┴───┴─┴───┴───
+  670          768 (Global Avg)                       855     865 (My Bid) 920
+```
+### Strategic Retrospective
+First Bid Validation: The global first-bid average landed at 768. My instinct was flawless here; the market heavily discounted their bids just as I predicted. Bidding 765 placed me directly inside the meat of the volume curve, pulling a massive 54,715 P&L out of the lower block.
+
+Second Bid Validation: The global second-bid average surged to an astonishing 859, driven entirely by the collective panic I anticipated. Because I correctly foresaw this hyper-inflation and positioned myself at 865, I cleared the global average line with precision. This insulated my P&L from the catastrophic cubic penalty that wiped out a significant portion of the grid, locking in a clean, unpenalized secondary return.
