@@ -182,3 +182,59 @@ The post-round market results perfectly validated my behavioral thesis, proving 
 >
 > *Second Bid Validation:* The global second-bid average surged to an astonishing 859, driven entirely by the collective panic I anticipated. Because I correctly foresaw this hyper-inflation and positioned myself at 865, I cleared the global average line with precision. This insulated my P&L from the catastrophic cubic penalty that wiped out a significant portion of the grid, locking in a clean, unpenalized secondary return.
 
+## Round: 4
+Instead of trying to predict the chaotic directional movements of Aether Crystals (which had a fixed annualized volatility of 251%), this strategy focused entirely on quantitative arbitrage. We isolated and captured mathematical discrepancies between market prices and theoretical fair values, maintaining a perfectly market-neutral portfolio.
+### 1. Structural Arbitrage: The Chooser Loop
+
+The most profitable mispricing on the board was the Chooser option (`AC_50_CO`), which was trading at a heavy premium. A chooser option allows the holder to decide at Week 2 whether the contract becomes a 3-week Call or a 3-week Put. 
+
+Mathematically, the value of this choice at Week 2 is $\max(C_{3w}, P_{3w})$. By applying standard put-call parity substitution, this functional identity simplifies perfectly to:
+
+$$\text{Chooser Value} = \text{3-week Call} + \text{2-week Put}$$
+
+The market was buying the Chooser for **22.2**, but the individual replication pieces (the 3-week Call and 2-week Put) could be bought together for just **21.80** (12.05 + 9.75). 
+
+**The Play:** We shorted 50 Chooser contracts and bought 50 pairs of the underlying components. This locked in a risk-free spread of **0.40 per contract** at day zero. Because the hedges perfectly mirror the chooser's payoff at the decision date, this profit was entirely decoupled from market direction.
+
+---
+
+### 2. Statistical Edge (Volatility Arbitrage)
+
+The challenge documentation explicitly fixed the annualized volatility at **251%**. This allowed us to calculate the exact theoretical fair value for every contract on the board using a standard Black-Scholes pricing model. 
+
+Since all positions were held to expiration across 100 independent simulations, the final cash settlement payouts were statistically guaranteed to converge toward their expected mathematical values (Law of Large Numbers). We deployed capital strictly where the market price deviated from this expected value:
+
+* **Buying Underpriced Variance:** `AC_35_P`, `AC_40_P`, and `AC_50_C_2` were trading below their statistical worth. Buying these contracts meant we collected more cash at settlement on average than we spent upfront.
+* **Selling Overpriced Premium:** `AC_40_BP` (Binary Put) and `AC_60_C` were irrationally expensive. We shorted these to harvest the overvalued premium.
+
+> [!NOTE]
+> **Avoiding the Trap:** We completely avoided the Knock-Out Put (`AC_45_KO`). Given 251% volatility simulated across 60 discrete daily steps, the probability of the underlying asset hitting the 35.0 barrier at some point is nearly 100%. Paying any premium for a contract structurally bound to expire worthless is a negative-EV gamble.
+
+---
+
+### 3. Direction-Blind Hedging (Delta Neutrality)
+
+To ensure our profits came solely from these mathematical mispricings rather than luck, we had to eliminate our exposure to the raw price movements of the Aether Crystals.
+
+After aggregating the directional sensitivities (Deltas) of all our long and short option positions, the net portfolio left us slightly **Short Delta**. This meant a sudden upward spike in the crystal price would harm our net margins. 
+
+**The Fix:**
+To perfectly balance the scales, we executed a spot hedge by **buying 11 units of the underlying Aether Crystal** at 50.025. This brought our net portfolio Delta to zero. Whether the crystal rallied or crashed during the 100 simulation runs, the gains and losses between our spot and options legs washed out, leaving our mathematical edge perfectly intact.
+
+---
+
+### Final Execution Portfolio
+
+| Product | Action | Target Price | Volume | Strategy Component |
+| :--- | :--- | :--- | :--- | :--- |
+| **AC_50_CO** | SELL | 22.2 | 50 | Structural Arbitrage |
+| **AC_50_C** | BUY | 12.05 | 50 | Arb Hedge |
+| **AC_50_P_2** | BUY | 9.75 | 50 | Arb Hedge |
+| **AC_40_BP** | SELL | 5.0 | 50 | Vol Arb (Overpriced) |
+| **AC_35_P** | BUY | 4.2 | 50 | Vol Arb (Underpriced) |
+| **AC_50_C_2** | BUY | 9.75 | 50 | Vol Arb (Underpriced) |
+| **AC_40_P** | BUY | 6.45 | 50 | Vol Arb (Underpriced) |
+| **AC_60_C** | SELL | 8.8 | 50 | Vol Arb (Overpriced) |
+| **Aether Crystal**| BUY | 50.025 | 11 | Delta Hedge |
+
+## Round: 5
