@@ -95,7 +95,8 @@ Before factoring in the competitive rank-based speed multiplier, my optimized po
 | **My Optimized (17 / 47 / 36)** | **125,256.32** | **3.29** | **412,093.30** | **50,000 XIRECs** |
 | **Delta** | *-18.04%* | *+42.42%* | **+16.73%** | *0%* |
 
-> **Key Takeaway:** Shifting capital away from the flat, saturated end of the Research curve into the linear Scale engine generates a **16.73% expansion in raw gross capacity** before the speed rank advantage is even applied.
+> [!NOTE]
+> **Key Takeaway:** Shifting capital away from the flat, saturated end of the Research curve into the linear Scale engine generated a **16.73% expansion in raw gross capacity** before the speed rank advantage was even applied.
 
 ## Round: 3
 In Round 3, I optimized a dual-bid architecture for trading Ornamental Bio-Pods against counterparties (Gardeners). Rather than relying on standard, static mathematical midpoints, my strategy was explicitly engineered around **behavioral game theory and competitor psychological profiling**. 
@@ -173,7 +174,11 @@ The post-round market results perfectly validated my behavioral thesis, proving 
 ───┴───┴─┴───┴─────┴───┴───────────────────────────────┴───┴───┴───┴─┴───┴───
   670          768 (Global Avg)                       855     865 (My Bid) 920
 ```
-### Strategic Retrospective
-First Bid Validation: The global first-bid average landed at 768. My instinct was flawless here; the market heavily discounted their bids just as I predicted. Bidding 765 placed me directly inside the meat of the volume curve, pulling a massive 54,715 P&L out of the lower block.
 
-Second Bid Validation: The global second-bid average surged to an astonishing 859, driven entirely by the collective panic I anticipated. Because I correctly foresaw this hyper-inflation and positioned myself at 865, I cleared the global average line with precision. This insulated my P&L from the catastrophic cubic penalty that wiped out a significant portion of the grid, locking in a clean, unpenalized secondary return.
+> [!NOTE]
+> **Key Takeaways:**
+>
+> *First Bid Validation:* The global first-bid average landed at 768. My instinct was flawless here; the market heavily discounted their bids just as I predicted. Bidding 765 placed me directly inside the meat of the volume curve, pulling a massive 54,715 P&L out of the lower block.
+>
+> *Second Bid Validation:* The global second-bid average surged to an astonishing 859, driven entirely by the collective panic I anticipated. Because I correctly foresaw this hyper-inflation and positioned myself at 865, I cleared the global average line with precision. This insulated my P&L from the catastrophic cubic penalty that wiped out a significant portion of the grid, locking in a clean, unpenalized secondary return.
+
